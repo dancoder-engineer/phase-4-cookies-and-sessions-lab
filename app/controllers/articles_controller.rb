@@ -7,7 +7,6 @@ class ArticlesController < ApplicationController
   end
 
   def show
-#    article = Article.find(params[:id])
     session[:page_views] ||= 0
     session[:page_views] = session[:page_views].to_i + 1
     if session[:page_views] < 4
